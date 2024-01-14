@@ -158,10 +158,53 @@
 	<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
 <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
 <script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+	<!-- require APlayer -->
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    	<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    	<!-- require MetingJS -->
+    	<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 </head>
 
 <body>
-	<embed src="mus/meyue.mp3" autostart="true" loop="true" hidden="true">
+	<!--<embed src="mus/meyue.mp3" autostart="true" loop="true" hidden="true">-->
+	
+	<div class="demo">
+        	<div id="player1">
+        	</div>
+    	</div>
+	<script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: true,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'list',
+                preload: 'auto',
+                volume: 0.7,
+                mutex: true,
+                listFolded: false,
+                listMaxHeight: 90,
+                lrcType: 0,
+                music: [ 
+                  {
+                name:'我（粤语）',
+                url:'https://residualsun1.github.io/Leslie-Cheung/mus/meyue.mp3',
+                artist:'张国荣',
+                cover:'https://residualsun1.github.io/Leslie-Cheung/img/revisit.jpg'
+                  },
+                  {
+                name:'我（国语）',
+                url:'https://residualsun1.github.io/Leslie-Cheung/mus/me.mp3',
+                artist:'张国荣',
+                cover:'https://residualsun1.github.io/Leslie-Cheung/img/revisit.jpg'
+                  },
+                ]
+        });
+        //ap.init();
+    </script>
 	
 <div id="container">
 	
