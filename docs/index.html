@@ -173,7 +173,6 @@
         	</div>
     	</div>
 	<script>
-	window.onload = function() {
         var ap = new APlayer
             ({
                 element: document.getElementById('player1'),
@@ -184,9 +183,9 @@
                 loop: 'all',
                 order: 'list',
                 preload: 'auto',
-                volume: 0.5,
+                volume: 0.7,
                 mutex: true,
-                listFolded: true,
+                listFolded: false,
                 listMaxHeight: 90,
                 lrcType: 0,
                 music: [ 
@@ -194,19 +193,17 @@
                 name:'我（粤语）',
                 url:'https://residualsun1.github.io/Leslie-Cheung/mus/meyue.mp3',
                 artist:'张国荣',
-                cover:'/img/revisit.jpg'
+                cover:'https://residualsun1.github.io/Leslie-Cheung/img/revisit.jpg'
                   },
                   {
                 name:'我（国语）',
                 url:'https://residualsun1.github.io/Leslie-Cheung/mus/me.mp3',
                 artist:'张国荣',
-                cover:'/img/revisit.jpg'
+                cover:'https://residualsun1.github.io/Leslie-Cheung/img/revisit.jpg'
                   },
                 ]
         });
         //ap.init();
-	ap.play();
-	};
     </script>
 	
 <div id="container">
